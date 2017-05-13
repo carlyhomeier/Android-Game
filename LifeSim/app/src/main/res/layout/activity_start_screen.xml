@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cayoticreations.lifesim.StartScreen">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:background="@drawable/startscreenbackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/startscreenbuttons"
+            android:fontFamily="casual"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="#432109"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/two_buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/NewGameButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/startscreenbuttons"
+                android:fontFamily="casual"
+                android:text="@string/action_new_game"
+                android:textAlignment="center"
+                android:textColor="#432109"
+                android:textSize="30sp"
+                android:onClick="set_stats_new"/>
+
+            <Button
+                android:id="@+id/ContinueButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/NewGameButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/startscreenbuttons"
+                android:fontFamily="casual"
+                android:text="@string/action_continue"
+                android:textAlignment="center"
+                android:textColor="#432109"
+                android:textSize="30sp"
+                android:onClick="go_to_main_screen"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

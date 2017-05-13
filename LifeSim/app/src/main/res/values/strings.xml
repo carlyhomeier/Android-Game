@@ -1,0 +1,205 @@
+<resources>
+    <!-- START SCREEN -->
+    <string name="app_name">Life Sim</string>
+    <string name="action_new_game">New Game</string>
+    <string name="action_continue">Continue</string>
+
+    <!-- TOP LEFT TEXT -->
+    <string name="action_health">Health</string>
+    <string name="action_hunger">Hunger</string>
+    <string name="action_energy">Energy</string>
+    <string name="action_happiness">Happiness</string>
+
+    <!-- TOP LEFT STATUS -->
+    <string name="action_healthstatus">%d/100</string>
+    <string name="action_hungerstatus">%d/100</string>
+    <string name="action_energystatus">%d/100</string>
+    <string name="action_happinessstatus">%d/100</string>
+
+    <!-- TOP RIGHT TEXT -->
+    <string name="action_cash">Cash:</string>
+    <string name="action_rent">Rent:</string>
+    <string name="action_loan">Loan:</string>
+    <string name="action_day">Day:</string>
+    <string name="action_time">Time:</string>
+
+    <!-- TOP RIGHT STATUS -->
+    <string name="action_cashstatus">$%d</string>
+    <string name="action_rentstatus">%d hours left</string>
+    <string name="action_loanstatus">$%d</string>
+    <string name="action_daystatus">%d of 100</string>
+    <string name="action_timestatus">%s:00</string>
+
+    <!-- MISC -->
+    <string name="no_requirements">-No Requirements</string>
+
+    <!-- HEAL SECTION -->
+    <string name="action_heal">Heal</string>
+    <string name="action_drink_water">Drink Water</string>
+    <string name="action_go_for_a_walk">Go For a Walk</string>
+    <string name="action_buy_a_bandage">Buy a Bandage</string>
+    <string name="action_buy_antiseptic">Buy Antiseptic</string>
+    <string name="action_wash_hands">Wash Hands</string>
+    <string name="action_shower">Shower</string>
+    <string name="action_rest_in_bed">Rest in Bed</string>
+    <string name="action_take_medication">Take Medication</string>
+    <string name="action_go_to_urgent_care">Go To Urgent Care</string>
+    <string name="action_go_to_hospital">Go to Hospital</string>
+    <string name="action_go_to_private_practice">Go to Private Practice</string>
+
+    <!-- EAT SECTION -->
+    <string name="action_eat">Eat</string>
+    <string name="action_eat_from_garbage">Eat From Garbage</string>
+    <string name="action_beg_for_food">Beg For Food</string>
+    <string name="action_buy_fast_food">Buy Fast Food</string>
+    <string name="action_search_the_fridge">Search the Fridge</string>
+    <string name="action_make_a_homemade_meal">Make a Homemade Meal</string>
+    <string name="action_visit_a_diner">Visit a Diner</string>
+    <string name="action_visit_a_local_restaurant">Visit a Local Restaurant</string>
+    <string name="action_take_a_date_to_dinner">Take a Date to Dinner</string>
+    <string name="action_visit_a_5_star_restaurant">Visit a 5 Star Restaurant</string>
+    <string name="action_hire_a_private_chef">Hire A Private Chef</string>
+
+    <!-- SLEEP SECTION -->
+    <string name="action_sleep">Sleep</string>
+    <string name="action_sleep_on_ground">Sleep On Ground</string>
+    <string name="action_visit_the_homeless_shelter">Visit the Homeless Shelter</string>
+    <string name="action_go_to_shady_hotel">Go To Shady Hotel</string>
+    <string name="action_sleep_on_cheap_bed">Sleep on Cheap Bed</string>
+    <string name="action_sleep_on_comfortable_bed">Sleep on Comfortable Bed</string>
+    <string name="action_go_to_hotel">Go To Hotel</string>
+    <string name="action_sleep_on_memory_foam_bed">Sleep on Memory Foam Bed</string>
+    <string name="action_sleep_on_luxurious_bed">Sleep on Luxurious Bed</string>
+    <string name="action_go_to_5_star_hotel">Go to 5 Star Hotel</string>
+
+    <!-- FUN SECTION -->
+    <string name="action_fun">Fun</string>
+    <string name="action_talk_to_stranger">Talk to Stranger</string>
+    <string name="action_go_to_local_park">Go to Local Park</string>
+    <string name="action_go_to_movie_theater">Go to Movie Theater</string>
+    <string name="action_watch_television">Watch Television</string>
+    <string name="action_blast_some_music">Blast Some Music</string>
+    <string name="action_go_to_a_concert">Go to a Concert</string>
+    <string name="action_go_skiing">Go Skiing</string>
+    <string name="action_get_a_private_tour">Get A Private Tour</string>
+    <string name="action_play_tennis_on_private_court">Play Tennis On Private Court</string>
+
+    <!-- WORK SECTION -->
+    <string name="action_work">Work</string>
+    <string name="action_beggar">Beggar</string>
+    <string name="action_dish_washer">Dish Washer</string>
+    <string name="action_sales_associate">Sales Associate</string>
+    <string name="action_bartender">Bartender</string>
+    <string name="action_manager">Manager</string>
+    <string name="action_general_manager">General Manager</string>
+    <string name="action_district_manager">District Manager</string>
+    <string name="action_vice_president">Vice President</string>
+    <string name="action_senior_vice_president">Vice President</string>
+    <string name="action_ceo">CEO</string>
+
+    <!-- SCHOOL SECTION -->
+    <string name="action_school">School</string>
+    <string name="action_ged_training">GED Training</string>
+    <string name="action_math_course">Math Course</string>
+    <string name="action_bartending_course">Bartending Course</string>
+    <string name="action_management_course">Management Course</string>
+    <string name="action_senior_management_course">Senior Management Course</string>
+    <string name="action_associates_of_business_administration">Associates of Business Administration Course</string>
+    <string name="action_bachelors_of_business_administration">Bachelors of Business Administration Course</string>
+    <string name="action_masters_of_business_administration">Masters of Business Administration Course</string>
+    <string name="action_doctorate_of_business_administration">Doctorate of Business Administration Course</string>
+
+    <!-- STORE SECTION -->
+    <string name="action_store">Store</string>
+    <string name="action_sloppy_clothes">Sloppy Clothes</string>
+    <string name="action_basketball">Basketball</string>
+    <string name="action_ultra_casual_clothes">Ultra-Casual Clothes</string>
+    <string name="action_bus_pass">Bus Pass</string>
+    <string name="action_casual_clothes">Casual Clothes</string>
+    <string name="action_athletic_clothes">Athletic Clothes</string>
+    <string name="action_winter_clothes">Winter Clothes</string>
+    <string name="action_stereo">Stereo</string>
+    <string name="action_television">Television</string>
+    <string name="action_business_casual_clothes">Business Casual Clothes</string>
+    <string name="action_business_clothes">Business Clothes</string>
+    <string name="action_cheap_bed">Cheap Bed</string>
+    <string name="action_install_sink">Install Sink</string>
+    <string name="action_black_tie_suit">Black Tie Suit</string>
+    <string name="action_install_stove">Install Stove</string>
+    <string name="action_apartment">Apartment</string>
+    <string name="action_couch">Couch</string>
+    <string name="action_install_shower">Install Shower</string>
+    <string name="action_comfortable_bed">Comfortable Bed</string>
+    <string name="action_skiis">Skiis</string>
+    <string name="action_install_fridge">Install Fridge</string>
+    <string name="action_memory_foam_bed">Memory Foam Bed</string>
+    <string name="action_condo">Condo</string>
+    <string name="action_house">House</string>
+    <string name="action_luxurious_bed">Luxurious Bed</string>
+    <string name="action_big_house">Big House</string>
+    <string name="action_mansion">Mansion</string>
+    <string name="action_car">Car</string>
+    <string name="action_private_tennis_court">Private Tennis Court</string>
+    <string name="action_sports_car">Sports Car</string>
+
+    <!-- PAY SECTION -->
+    <string name="action_payloan">Loan</string>
+    <string name="action_pay_100">Pay 100</string>
+    <string name="action_pay_1000">Pay 1000</string>
+    <string name="action_pay_10000">Pay 10000</string>
+    <string name="action_pay_100000">Pay 100000</string>
+    <string name="action_pay_1000000">Pay 1000000</string>
+    
+    <!-- CASH COSTS -->
+    <string name="action_0">-</string>
+    <string name="action_1">$1</string>
+    <string name="action_2">$2</string>
+    <string name="action_3">$3</string>
+    <string name="action_5">$5</string>
+    <string name="action_7">$7</string>
+    <string name="action_8">$8</string>
+    <string name="action_9">$9</string>
+    <string name="action_10">$10</string>
+    <string name="action_15">$15</string>
+    <string name="action_18">$18</string>
+    <string name="action_20">$20</string>
+    <string name="action_25">$25</string>
+    <string name="action_30">$30</string>
+    <string name="action_35">$35</string>
+    <string name="action_40">$40</string>
+    <string name="action_45">$45</string>
+    <string name="action_50">$50</string>
+    <string name="action_55">$55</string>
+    <string name="action_60">$60</string>
+    <string name="action_70">$70</string>
+    <string name="action_75">$75</string>
+    <string name="action_85">$85</string>
+    <string name="action_100">$100</string>
+    <string name="action_125">$125</string>
+    <string name="action_175">$175</string>
+    <string name="action_200">$200</string>
+    <string name="action_250">$250</string>
+    <string name="action_300">$300</string>
+    <string name="action_325">$325</string>
+    <string name="action_400">$400</string>
+    <string name="action_500">$500</string>
+    <string name="action_700">$700</string>
+    <string name="action_800">$800</string>
+    <string name="action_1000">$1000</string>
+    <string name="action_1300">$1300</string>
+    <string name="action_1400">$1400</string>
+    <string name="action_1500">$1500</string>
+    <string name="action_1600">$1600</string>
+    <string name="action_2600">$2600</string>
+    <string name="action_3000">$3000</string>
+    <string name="action_3750">$3750</string>
+    <string name="action_5000">$5000</string>
+    <string name="action_6000">$6000</string>
+    <string name="action_7500">$7500</string>
+    <string name="action_10000">$10000</string>
+    <string name="action_35000">$35000</string>
+    <string name="action_65000">$65000</string>
+    <string name="action_250000">$250000</string>
+    <string name="action_100000">$100000</string>
+    <string name="action_1000000">$1000000</string>
+</resources>

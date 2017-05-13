@@ -1,0 +1,2794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_of_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="6"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/status_bars"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/HealthLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginBottom="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/healthtext"
+                        style="@style/StatusBarTextStyle"
+                        android:text="@string/action_health" />
+
+                    <TextView
+                        android:id="@+id/healthstatus"
+                        style="@style/StatusBarTextStatusStyle"
+                        android:layout_toEndOf="@id/healthtext"
+                        android:text="@string/action_healthstatus" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/HealthBar"
+                    style="@style/StatusBarProgressStyle"
+                    android:layout_width="match_parent"
+                    android:layout_weight="5"
+                    android:progressDrawable="@drawable/heal_bar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/HungerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/hungertext"
+                        style="@style/StatusBarTextStyle"
+                        android:text="@string/action_hunger" />
+
+                    <TextView
+                        android:id="@+id/hungerstatus"
+                        style="@style/StatusBarTextStatusStyle"
+                        android:layout_toEndOf="@id/hungertext"
+                        android:text="@string/action_hungerstatus" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/HungerBar"
+                    style="@style/StatusBarProgressStyle"
+                    android:layout_width="match_parent"
+                    android:layout_weight="5"
+                    android:progressDrawable="@drawable/hunger_bar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/EnergyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/energytext"
+                        style="@style/StatusBarTextStyle"
+                        android:text="@string/action_energy" />
+
+                    <TextView
+                        android:id="@+id/energystatus"
+                        style="@style/StatusBarTextStatusStyle"
+                        android:layout_toEndOf="@id/energytext"
+                        android:text="@string/action_energystatus" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/EnergyBar"
+                    style="@style/StatusBarProgressStyle"
+                    android:layout_width="match_parent"
+                    android:layout_weight="5"
+                    android:progressDrawable="@drawable/energy_bar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/HappinessLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/happinesstext"
+                        style="@style/StatusBarTextStyle"
+                        android:text="@string/action_happiness" />
+
+                    <TextView
+                        android:id="@+id/happinessstatus"
+                        style="@style/StatusBarTextStatusStyle"
+                        android:layout_toEndOf="@id/happinesstext"
+                        android:text="@string/action_happinessstatus"/>
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/HappinessBar"
+                    style="@style/StatusBarProgressStyle"
+                    android:layout_width="match_parent"
+                    android:layout_weight="5"
+                    android:progressDrawable="@drawable/happiness_bar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/amount_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cashtext"
+                        style="@style/TopStatusStyle"
+                        android:text="@string/action_cash"/>
+                    <TextView
+                        android:id="@+id/cashstatus"
+                        style="@style/TopStatusStyle"
+                        android:layout_toEndOf="@id/cashtext"
+                        android:text="@string/action_cashstatus"/>
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/loantext"
+                    style="@style/TopStatusStyle"
+                    android:text="@string/action_loan"/>
+                <TextView
+                    android:id="@+id/loanstatus"
+                    style="@style/TopStatusStyle"
+                    android:layout_toEndOf="@id/loantext"
+                    android:text="@string/action_loanstatus"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/renttext"
+                        style="@style/TopStatusStyle"
+                        android:text="@string/action_rent"/>
+                    <TextView
+                        android:id="@+id/rentstatus"
+                        style="@style/TopStatusStyle"
+                        android:layout_toEndOf="@id/renttext"
+                        android:text="@string/action_rentstatus"/>
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/daytext"
+                        style="@style/TopStatusStyle"
+                        android:text="@string/action_day"/>
+                    <TextView
+                        android:id="@+id/daystatus"
+                        style="@style/TopStatusStyle"
+                        android:layout_toEndOf="@id/daytext"
+                        android:text="@string/action_daystatus"/>
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/timetext"
+                        style="@style/TopStatusStyle"
+                        android:text="@string/action_time"/>
+                    <TextView
+                        android:id="@+id/timestatus"
+                        style="@style/TopStatusStyle"
+                        android:layout_toEndOf="@id/timetext"
+                        android:text="@string/action_timestatus"/>
+
+                </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/middle_of_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/row_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/HealButton"
+                style="@style/MainButtonStyle"
+                android:onClick="go_to_heal"
+                android:text="@string/action_heal"
+                android:textColor="@color/colorGreen" />
+
+            <Button
+                android:id="@+id/EatButton"
+                style="@style/MainButtonStyle"
+                android:onClick="go_to_eat"
+                android:text="@string/action_eat"
+                android:textColor="@color/colorBlue" />
+
+            <Button
+                android:id="@+id/SleepButton"
+                style="@style/MainButtonStyle"
+                android:onClick="go_to_sleep"
+                android:text="@string/action_sleep"
+                android:textColor="@color/colorYellow" />
+
+            <Button
+                android:id="@+id/FunButton"
+                style="@style/MainButtonStyle"
+                android:onClick="go_to_fun"
+                android:text="@string/action_fun"
+                android:textColor="@color/colorPink" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/workbutton"
+                style="@style/MainButtonStyle"
+                android:textColor="@color/colorLightOrange"
+                android:onClick="go_to_work"
+                android:text="@string/action_work" />
+
+            <Button
+                android:id="@+id/schoolbutton"
+                style="@style/MainButtonStyle"
+                android:textColor="@color/colorPurple"
+                android:onClick="go_to_school"
+                android:text="@string/action_school" />
+
+            <Button
+                android:id="@+id/storebutton"
+                style="@style/MainButtonStyle"
+                android:textColor="@color/colorBlueGreen"
+                android:onClick="go_to_store"
+                android:text="@string/action_store"/>
+
+            <Button
+                android:id="@+id/loanbutton"
+                style="@style/MainButtonStyle"
+                android:textColor="@color/colorRed"
+                android:onClick="go_to_loan"
+                android:text="@string/action_payloan"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_three"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/cartbutton"
+                style="@style/cartStyle"/>
+
+            <ImageButton
+                android:id="@+id/achievementsbutton"
+                style="@style/achievementStyle"/>
+
+            <ImageButton
+                android:id="@+id/cloudbutton"
+                style="@style/cloudStyle"/>
+
+            <ImageButton
+                android:id="@+id/settingsbutton"
+                style="@style/settingsStyle"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_of_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/healscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/heallinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/DrinkWater"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_drink_water"
+                        android:text="@string/action_drink_water"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoForAWalk"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_go_for_a_walk"
+                        android:text="@string/action_go_for_a_walk"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoForAWalkReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_sloppy_clothes"/>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/BuyABandage"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_buy_a_bandage"
+                        android:text="@string/action_buy_a_bandage"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_1"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/BuyABandageReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_bus_pass"/>
+					
+				<CheckedTextView
+                android:id="@+id/BuyABandageReq2"
+                style="@style/SideCheckedText"
+                android:text="@string/action_sloppy_clothes"/>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/BuyAntiseptic"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_buy_antiseptic"
+                        android:text="@string/action_buy_antiseptic"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_3"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/BuyAntisepticReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_bus_pass"/>
+					<CheckedTextView
+                    android:id="@+id/BuyAntisepticReq2"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_casual_clothes"/>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/WashHands"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_wash_hands"
+                        android:text="@string/action_wash_hands"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/WashHandsReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_house"/>
+					<CheckedTextView
+                    android:id="@+id/WashHandsReq2"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_install_sink"/>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/Shower"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_shower"
+                        android:text="@string/action_shower"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/ShowerReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_house"/>
+					<CheckedTextView
+                    android:id="@+id/ShowerReq2"
+                    style="@style/SideCheckedText"
+                android:text="@string/action_install_sink"/>
+					<CheckedTextView
+                    android:id="@+id/ShowerReq3"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_shower"/>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/RestInBed"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_rest_in_bed"
+                        android:text="@string/action_rest_in_bed"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/RestInBedReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_house"/>
+					 <CheckedTextView
+                    android:id="@+id/RestInBedReq2"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_shower"/>
+					 <CheckedTextView
+                    android:id="@+id/RestInBedReq3"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_cheap_bed"/>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/TakeMedication"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_take_medication"
+                        android:text="@string/action_take_medication"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/TakeMedicationReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_apartment"/>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoToUrgentCare"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_go_to_urgent_care"
+                        android:text="@string/action_go_to_urgent_care"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_30"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoToUrgentCareReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_condo"/>
+	
+					<CheckedTextView
+                    android:id="@+id/GoToUrgentCareReq2"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_bus_pass"/>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoToHospital"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_go_to_hospital"
+                        android:text="@string/action_go_to_hospital"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_50"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoToHospitalReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_house"/>
+					<CheckedTextView
+                    android:id="@+id/GoToHospitalReq2"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_car"/>
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoToPrivatePractice"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_go_to_private_practice"
+                        android:text="@string/action_go_to_private_practice"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_400"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoToPrivatePracticeReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_mansion"/>
+					<CheckedTextView
+                    android:id="@+id/GoToPrivatePracticeReq2"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_sports_car"/>
+					<CheckedTextView
+                    android:id="@+id/GoToPrivatePracticeReq3"
+                    style="@style/SideCheckedText"
+                    android:text="@string/action_black_tie_suit"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/eatscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/eatlinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/EatFromGarbage"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorBlue"
+                        android:onClick="do_eat_from_garbage"
+                        android:text="@string/action_eat_from_garbage" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/EatFromGarbageReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/BegForFood"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorBlue"
+                        android:onClick="do_beg_for_food"
+                        android:text="@string/action_beg_for_food" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/BegForFoodReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/BuyFastFood"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorBlue"
+                        android:onClick="do_buy_fast_food"
+                        android:text="@string/action_buy_fast_food" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_5"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/BuyFastFoodReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/SearchTheFridge"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorBlue"
+                        android:onClick="do_search_the_fridge"
+                        android:text="@string/action_search_the_fridge" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_8"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/SearchTheFridgeReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/MakeAHomemadeMeal"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorBlue"
+                        android:onClick="do_make_a_homemade_meal"
+                        android:text="@string/action_make_a_homemade_meal" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_10"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/MakeAHomemadeMealReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/VisitADiner"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorBlue"
+                        android:onClick="do_visit_a_diner"
+                        android:text="@string/action_visit_a_diner" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_20"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/VisitADinerReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/VisitALocalRestaurant"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorBlue"
+                        android:onClick="do_visit_a_local_restaurant"
+                        android:text="@string/action_visit_a_local_restaurant" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_40"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/VisitALocalRestaurantReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/TakeADateToDinner"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorBlue"
+                        android:onClick="do_take_a_date_to_dinner"
+                        android:text="@string/action_take_a_date_to_dinner" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_125"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/TakeADateToDinnerReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/VisitA5StarRestaurant"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorBlue"
+                        android:onClick="do_visit_a_5_star_restaurant"
+                        android:text="@string/action_visit_a_5_star_restaurant" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_250"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/VisitA5StarRestaurantReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/HireAPrivateChef"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorGreen"
+                        android:onClick="do_hire_a_private_chef"
+                        android:text="@string/action_hire_a_private_chef"/>
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_300"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/HireAPrivateChefReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/sleepscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/sleeplinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/SleepOnGround"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorYellow"
+                        android:onClick="do_sleep_on_ground"
+                        android:text="@string/action_sleep_on_ground" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/SleepOnGroundReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/VisitTheHomelessShelter"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorYellow"
+                        android:onClick="do_visit_the_homeless_shelter"
+                        android:text="@string/action_visit_the_homeless_shelter" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/VisitTheHomelessShelterReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoToShadyHotel"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorYellow"
+                        android:onClick="do_go_to_shady_hotel"
+                        android:text="@string/action_go_to_shady_hotel" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_20"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoToShadyHotelReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/SleepOnCheapBed"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorYellow"
+                        android:onClick="do_sleep_on_cheap_bed"
+                        android:text="@string/action_sleep_on_cheap_bed" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/SleepOnCheapBedReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/SleepOnComfortableBed"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorYellow"
+                        android:onClick="do_sleep_on_comfortable_bed"
+                        android:text="@string/action_sleep_on_comfortable_bed" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/SleepOnComfortableBedReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoToHotel"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorYellow"
+                        android:onClick="do_go_to_hotel"
+                        android:text="@string/action_go_to_hotel" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_100"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoToHotelReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/SleepOnMemoryFoamBed"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorYellow"
+                        android:onClick="do_sleep_on_memory_foam_bed"
+                        android:text="@string/action_sleep_on_memory_foam_bed" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/SleepOnMemoryFoamBedReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/SleepOnLuxuriousBed"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorYellow"
+                        android:onClick="do_sleep_on_luxurious_bed"
+                        android:text="@string/action_sleep_on_luxurious_bed" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/SleepOnLuxuriousBedReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoTo5StarHotel"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorYellow"
+                        android:onClick="do_go_to_5_star_hotel"
+                        android:text="@string/action_go_to_5_star_hotel" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_100"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoTo5StarHotelReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/funscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/funlinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/TalkToStranger"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorPink"
+                        android:onClick="do_talk_to_stranger"
+                        android:text="@string/action_talk_to_stranger" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/TalkToStrangerReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoToLocalPark"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorPink"
+                        android:onClick="do_go_to_local_park"
+                        android:text="@string/action_go_to_local_park" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoToLocalParkReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoToMovieTheater"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorPink"
+                        android:onClick="do_go_to_movie_theater"
+                        android:text="@string/action_go_to_movie_theater" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_15"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoToMovieTheaterReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoToAConcert"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorPink"
+                        android:onClick="do_go_to_a_concert"
+                        android:text="@string/action_go_to_a_concert" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_45"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoToAConcertReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/BlastSomeMusic"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorPink"
+                        android:onClick="do_blast_some_music"
+                        android:text="@string/action_blast_some_music" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/BlastSomeMusicReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/WatchTelevision"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorPink"
+                        android:onClick="do_watch_television"
+                        android:text="@string/action_watch_television" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/WatchTelevisionReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GoSkiing"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorPink"
+                        android:onClick="do_go_skiing"
+                        android:text="@string/action_go_skiing" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_85"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GoSkiingReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/GetAPrivateTour"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorPink"
+                        android:onClick="do_get_a_private_tour"
+                        android:text="@string/action_get_a_private_tour" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_200"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GetAPrivateTourReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckedTextView
+                        android:id="@+id/PlayTennisOnPrivateCourt"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorPink"
+                        android:onClick="do_play_tennis_on_private_court"
+                        android:text="@string/action_play_tennis_on_private_court" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_0"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/PlayTennisOnPrivateCourtReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/workscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/worklinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/Beggar"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_beggar"
+                        android:text="@string/action_beggar" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_2"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/BegForChangeReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/DishWasher"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_dish_washer"
+                        android:text="@string/action_dish_washer" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_7"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/DishWasherReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/SalesAssociate"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_sales_associate"
+                        android:text="@string/action_sales_associate" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_9"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/SalesAssociate1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/Bartender"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_bartender"
+                        android:text="@string/action_bartender" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_15"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/BartenderReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/Manager"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_manager"
+                        android:text="@string/action_manager" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_18"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/ManagerReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/GeneralManager"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_general_manager"
+                        android:text="@string/action_general_manager" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_20"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/GeneralManagerReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/DistrictManager"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_district_manager"
+                        android:text="@string/action_district_manager" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_25"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/DistrictManagerReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/VicePresident"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_vice_president"
+                        android:text="@string/action_vice_president" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_35"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/VicePresidentReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/SeniorVicePresident"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_senior_vice_president"
+                        android:text="@string/action_senior_vice_president" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_50"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/SeniorVicePresidentReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/CEO"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorLightOrange"
+                        android:onClick="do_ceo"
+                        android:text="@string/action_ceo" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/action_100"/>
+
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/CEOReq1"
+                    style="@style/SideCheckedText"
+                    android:text="@string/no_requirements" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/schoolscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/schoollinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/GEDTraining"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorPurple"
+                    android:onClick="do_ged_training"
+                    android:text="@string/action_ged_training" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_10"/>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/GEDTrainingReq1"
+                style="@style/SideCheckedText"
+                android:text="@string/no_requirements" />
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/MathCourse"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorPurple"
+                    android:onClick="do_math_course"
+                    android:text="@string/action_math_course"/>
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_15"/>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/MathCourseReq1"
+                style="@style/SideCheckedText"
+                android:text="@string/no_requirements" />
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/BartendingCourse"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorPurple"
+                    android:onClick="do_bartending_course"
+                    android:text="@string/action_bartending_course" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_18"/>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/BartendingCourseReq1"
+                style="@style/SideCheckedText"
+                android:text="@string/no_requirements" />
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/ManagementCourse"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorPurple"
+                    android:onClick="do_management_course"
+                    android:text="@string/action_management_course" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_20"/>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/ManagementCourseReq1"
+                style="@style/SideCheckedText"
+                android:text="@string/no_requirements" />
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/SeniorManagementCourse"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorPurple"
+                    android:onClick="do_senior_management_course"
+                    android:text="@string/action_senior_management_course" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_30"/>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/SeniorManagementCourseReq1"
+                style="@style/SideCheckedText"
+                android:text="@string/no_requirements" />
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/AssociatesOfBusinessAdministration"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorPurple"
+                    android:onClick="do_associates_of_business_administration"
+                    android:text="@string/action_associates_of_business_administration" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_60"/>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/AssociatesOfBusinessAdministrationReq1"
+                style="@style/SideCheckedText"
+                android:text="@string/no_requirements" />
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/BachelorsOfBusinessAdministration"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorPurple"
+                    android:onClick="do_bachelors_of_business_administration"
+                    android:text="@string/action_bachelors_of_business_administration" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_300"/>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/BachelorsOfBusinessAdministrationReq1"
+                style="@style/SideCheckedText"
+                android:text="@string/no_requirements" />
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/MastersOfBusinessAdministration"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorPurple"
+                    android:onClick="do_masters_of_business_administration"
+                    android:text="@string/action_masters_of_business_administration" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_800"/>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/MastersOfBusinessAdministrationReq1"
+                style="@style/SideCheckedText"
+                android:text="@string/no_requirements" />
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/DoctorateOfBusinessAdministration"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorPurple"
+                    android:onClick="do_doctorate_of_business_administration"
+                    android:text="@string/action_doctorate_of_business_administration" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_700"/>
+
+            </LinearLayout>
+
+            <CheckedTextView
+                android:id="@+id/DoctorateOfBusinessAdministrationReq1"
+                style="@style/SideCheckedText"
+                android:text="@string/no_requirements" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/storescroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/storelinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/Basketball"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_basketball"
+                    android:text="@string/action_basketball" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_15"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/SloppyClothes"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_sloppy_clothes"
+                    android:text="@string/action_sloppy_clothes" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_20"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/UltraCasualClothes"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_ultra_casual_clothes"
+                    android:text="@string/action_ultra_casual_clothes" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_40"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/BusPass"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_bus_pass"
+                    android:text="@string/action_bus_pass" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_55"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/CasualClothes"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_casual_clothes"
+                    android:text="@string/action_casual_clothes" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_60"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/AthleticClothes"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_athletic_clothes"
+                    android:text="@string/action_athletic_clothes" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_70"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/WinterClothes"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_winter_clothes"
+                    android:text="@string/action_winter_clothes" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_75"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/Stereo"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_stereo"
+                    android:text="@string/action_stereo" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_175"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/Television"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_television"
+                    android:text="@string/action_television" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_200"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/BusinessCasualClothes"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_business_casual_clothes"
+                    android:text="@string/action_business_casual_clothes" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_250"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/BusinessClothes"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_business_clothes"
+                    android:text="@string/action_business_clothes" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_300"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/CheapBed"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_cheap_bed"
+                    android:text="@string/action_cheap_bed" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_325"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/InstallSink"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_install_sink"
+                    android:text="@string/action_install_sink" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_400"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/BlackTieSuit"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_black_tie_suit"
+                    android:text="@string/action_black_tie_suit" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_500"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/InstallStove"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_install_stove"
+                    android:text="@string/action_install_stove" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_800"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/Apartment"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_apartment"
+                    android:text="@string/action_apartment" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_1000"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/Couch"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_couch"
+                    android:text="@string/action_couch" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_1300"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/InstallShower"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_install_shower"
+                    android:text="@string/action_install_shower" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_1400"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/ComfortableBed"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_comfortable_bed"
+                    android:text="@string/action_comfortable_bed" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_1500"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/Skiis"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_skiis"
+                    android:text="@string/action_skiis" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_1600"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/InstallFridge"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_install_fridge"
+                    android:text="@string/action_install_fridge" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_2600"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/MemoryFoamBed"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_memory_foam_bed"
+                    android:text="@string/action_memory_foam_bed" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_3000"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/Condo"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_condo"
+                    android:text="@string/action_condo" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_3750"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/House"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_house"
+                    android:text="@string/action_house" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_5000"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/LuxuriousBed"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_luxurious_bed"
+                    android:text="@string/action_luxurious_bed" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_6000"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            <CheckedTextView
+                android:id="@+id/BigHouse"
+                style="@style/MainCheckedText"
+                android:textColor="@color/colorBlueGreen"
+                android:onClick="do_big_house"
+                android:text="@string/action_big_house" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_7500"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/Mansion"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_mansion"
+                    android:text="@string/action_mansion" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_10000"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/Car"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_car"
+                    android:text="@string/action_car" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_35000"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/PrivateTennisCourt"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_private_tennis_court"
+                    android:text="@string/action_private_tennis_court" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_65000"/>
+
+            </LinearLayout>
+
+            <View style="@style/dividerstyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckedTextView
+                    android:id="@+id/SportsCar"
+                    style="@style/MainCheckedText"
+                    android:textColor="@color/colorBlueGreen"
+                    android:onClick="do_sports_car"
+                    android:text="@string/action_sports_car" />
+
+                <TextView
+                    style="@style/CashText"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/action_250000"/>
+
+            </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/loanscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/loanlinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/Pay100"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorRed"
+                        android:onClick="do_pay_100"
+                        android:text="@string/action_pay_100" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_100"/>
+
+                </LinearLayout>
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/Pay1000"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorRed"
+                        android:onClick="do_pay_1000"
+                        android:text="@string/action_pay_1000" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_1000"/>
+
+                </LinearLayout>
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/Pay10000"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorRed"
+                        android:onClick="do_pay_10000"
+                        android:text="@string/action_pay_10000" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_10000"/>
+
+                </LinearLayout>
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/Pay100000"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorRed"
+                        android:onClick="do_pay_100000"
+                        android:text="@string/action_pay_100000" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_100000"/>
+
+                </LinearLayout>
+
+                <View style="@style/dividerstyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/Pay1000000"
+                        style="@style/MainCheckedText"
+                        android:textColor="@color/colorRed"
+                        android:onClick="do_pay_1000000"
+                        android:text="@string/action_pay_1000000" />
+
+                    <TextView
+                        style="@style/CashText"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/action_100000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

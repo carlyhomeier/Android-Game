@@ -1,0 +1,158 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- TOP LEFT SECTION -->
+    <style name="StatusBarTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:fontFamily">casual"</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">bottom|left</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="StatusBarTextStatusStyle" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:fontFamily">casual"</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">bottom|left</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- TOP RIGHT SECTION -->
+    <style name="StatusBarProgressStyle" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:max">100</item>
+    </style>
+    <style name="TopStatusStyle" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:fontFamily">casual"</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">bottom|left</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- MIDDLE SECTION -->
+    <style name="MainButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/main_button_layout</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="settingsStyle" parent="@android:style/Widget.ImageButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/main_button_layout</item>
+        <item name="android:src">@drawable/settingsimg</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <style name="achievementStyle" parent="@android:style/Widget.ImageButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/main_button_layout</item>
+        <item name="android:src">@drawable/controllerimg</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <style name="cloudStyle" parent="@android:style/Widget.ImageButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/main_button_layout</item>
+        <item name="android:src">@drawable/cloudimg</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <style name="cartStyle" parent="@android:style/Widget.ImageButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/main_button_layout</item>
+        <item name="android:src">@drawable/cartimg</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <!-- BOTTOM SECTION -->
+    <style name="MainCheckedText" parent="@android:style/Widget.Holo.CheckedTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@drawable/main_button_layout</item>
+        <item name="android:checked">false</item>
+        <item name="android:drawableLeft">@drawable/checkbox</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="CashText" parent="@android:style/Widget.Holo.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@drawable/main_button_layout</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:gravity">end</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_weight">3</item>
+    </style>
+    <style name="SideCheckedText" parent="@android:style/Widget.Holo.CheckedTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:background">@drawable/main_button_layout</item>
+        <item name="android:checked">false</item>
+        <item name="android:drawableLeft">@drawable/checkbox</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="dividerstyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#c0c0c0</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+</resources>
