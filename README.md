@@ -1,2 +1,7 @@
 # Android-Game
 Text based android game
+![alt text](https://github.com/carlyhomeier/Android-Game/blob/master/Screenshot_2017-08-19_163136.jpg)<br />
+![alt text](https://github.com/carlyhomeier/Android-Game/blob/master/Screenshot_2017-08-19_163147.jpg)<br />
+![alt text](https://github.com/carlyhomeier/Android-Game/blob/master/Screenshot_2017-08-19_163218.jpg)<br />
+![alt text](https://github.com/carlyhomeier/Android-Game/blob/master/Screenshot_2017-08-19_163232.jpg)<br />
+![alt text](https://github.com/carlyhomeier/Android-Game/blob/master/Screenshot_2017-08-19_163239.jpg)<br />
